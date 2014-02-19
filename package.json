@@ -1,0 +1,30 @@
+{
+  //Must use double quotes, no singles
+  "name": "jstest",
+  "version": "0.0.0",
+  "description": "My First package.json",
+  "main": "index.js",
+  "directories":{
+    "test":"test"
+  },
+  "scripts":{
+    "test":"grunt PlayingCard"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-simple-mocha":"~0.4.0",
+    "jshint": "~2.4.3",
+    "grunt-contrib-jshint": "~0.8.0",
+    "chai":"~1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcorns/Repository1"
+  },
+  "author": "Dale Corns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dcorns/Repository1/issues"
+  },
+  "homepage": "https://github.com/dcorns/Repository1"
+}
