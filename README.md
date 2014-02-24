@@ -1,4 +1,4 @@
 CARDS
 =====
 
-On going project on cards for practice
+Never ending project on cards for practice
