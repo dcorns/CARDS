@@ -1,26 +1,21 @@
-/*global module:false*/
-module.exports = function(grunt) {
+module.exports=function(grunt){
+	grunt.initConfig({
+jshint:{
+	files:['gruntfile.js','*.js','test/**/*.js']
+},
+simplemocha:{
+	options:{
+		timeout:3000,
+		ignoreLeaks:true,
+		reporter:'tap'
+	},
+	all:{src:['test/Deck-Spec.js']}
+}
 
-  // Project configuration.
-  grunt.initConfig({
-    jshint:{
-      all:['*.js']
-    },
-    simplemocha: {
-      options: {
-        timeout: 3000,
-        ignoreLeaks: true,
-        reporter: 'tap'
-      },
+});
 
-      all: { src: ['test/**/*.js'] }
-    }
-  });
+grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-simple-mocha');
 
-  // For this to work, you need to have run `npm install grunt-simple-mocha`
-  grunt.loadNpmTasks('grunt-simple-mocha');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  // Add a default task. This is optional, of course :)
-  grunt.registerTask('default', ['simplemocha','jshint']);
-
+grunt.registerTask('default',['simplemocha','jshint']);
 };
