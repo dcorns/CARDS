@@ -1,7 +1,7 @@
 //Test Card object for imutibility
 //this line includes the expect function from the chai library and by choice assigns it the same name
 var expect=require('chai').expect;
-var Card=require('../lib/PlayingCard.js').Card;
+var Card=require('../lib/card.js').Card;
 describe('Card Tests',function(){
 	'use strict';
 	var card;
@@ -18,7 +18,7 @@ describe('Card Tests',function(){
 			it('Should not have a rank property', function(){
 				expect(card).to.not.have.property('rank');
 			});
-			it('card rank property in undefined', function(){
+			it('card rank property is undefined', function(){
 				var heresosjhint=expect(card.rank).to.be.an.undefined;
 			});
 			it('card should not have a suite property',function(){

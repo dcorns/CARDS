@@ -9,8 +9,8 @@ simplemocha:{
 		ignoreLeaks:true,
 		reporter:'tap'
 	},
-	all:{src:['test/Deck-Spec.js']}
-}
+	all:{src:['test/**/*.*']}
+},
 
 });
 
@@ -18,4 +18,5 @@ grunt.loadNpmTasks('grunt-contrib-jshint');
 grunt.loadNpmTasks('grunt-simple-mocha');
 
 grunt.registerTask('default',['simplemocha','jshint']);
+
 };
